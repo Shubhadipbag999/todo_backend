@@ -29,6 +29,7 @@ export const register = async (req, res, next) => {
         console.log(user)
 
         if (user) {
+            console.log("user already exist")
             return next(new ErrorHandler("user already exist pleasse login", 404))
         }
         else {
